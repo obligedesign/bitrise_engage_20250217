@@ -1,0 +1,14 @@
+@use '../partials/functions';
+
+.hidden--md {
+  @media screen and (max-width: $tablet - 1px) {
+    display: none !important;
+  }
+}
+
+.visible--md {
+  display: none;
+  @media screen and (max-width: $tablet - 1px) {
+    display: block !important;
+  }
+}

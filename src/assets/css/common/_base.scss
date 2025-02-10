@@ -1,0 +1,64 @@
+/* Global Variable */
+:root {
+  --screen-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "palt";
+  overflow-x: hidden;
+}
+
+html,
+body,
+button,
+select {
+  font-family: $fontFamilyDefault;
+  color: $font-color;
+  font-size: $pcFontSize;
+  font-weight: $FontWeight;
+  letter-spacing: $pcLetterSpacing;
+  line-height: $pcLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-rendering: geometricPrecision;
+}
+
+body {
+  position: relative;
+}
+
+main {
+  position: relative;
+  
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+picture, figure {
+  display: block;
+}
+
+img,
+svg {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+a {
+  display: block;
+  cursor: pointer;
+}
+
+@media screen and (min-width: $tablet) {
+  html,
+  body,
+  button,
+  select {
+    font-size: $spFontSize;
+    line-height: $spLineHeight;
+    letter-spacing: $spLetterSpacing;
+  }
+}

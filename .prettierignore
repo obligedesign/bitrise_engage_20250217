@@ -1,0 +1,9 @@
+# Ignore artifacts:
+dist
+package-lock.json
+package.json
+README.md
+src/assets/lottie
+
+# Ignore all HTML files:
+node_modules/**/*

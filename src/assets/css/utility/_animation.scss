@@ -1,0 +1,58 @@
+@use '../partials/functions';
+
+.js-fadeUp {
+  opacity: 0;
+  transform: translateY(30px);
+  @include transitionDuration(0.8s);
+
+  &.is-view {
+    opacity: 1;
+    transform: translateY(0);
+    @include transitionDuration();
+
+    transition-delay: 0.3s;
+  }
+}
+
+.js-fadeLeft {
+  opacity: 0;
+  transform: translateX(-30px);
+  @include transitionDuration();
+
+  &.is-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.js-fadeRight {
+  opacity: 0;
+  transform: translateX(30px);
+  transition-delay: .3s;
+  @include transitionDuration();
+  
+  &.is-view {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.js-fadeIn {
+  opacity: 0;
+  @include transitionDuration(1s);
+
+  &.is-view {
+    opacity: 1;
+    transition-delay: 0.3s;
+  }
+}
+
+.js-fadeInLate {
+  opacity: 0;
+  @include transitionDuration(1s);
+  
+  &.is-view {
+    opacity: 1;
+    transition-delay: 0.6s;
+  }
+}

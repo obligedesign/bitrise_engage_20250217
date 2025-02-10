@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+/**
+ * vw計算関数
+ */
+
+@function convertPXtoVW($px, $vp: 640, $unit: vw) {
+  @return (math.div($px, $vp) * 100) + $unit;
+}
+
+/**
+ * 横幅の最大値を返す関数
+ */
+
+@function minVWandPX($px, $vp: 850 + 100 * 2, $unit: vw) {
+  @return min(#{(math.div($px, $vp) * 100) + $unit}, #{$px + px});
+}
+
+@function maxVWandPX($px, $vp: 850 + 100 * 2, $unit: vw) {
+  @return max(#{(math.div($px, $vp) * 100) + $unit}, #{$px + px});
+}
+
+@mixin transitionDuration($delayTime: 0.6s) {
+  transition-duration: $delayTime;
+  transition-property: all;
+}
+
+@mixin hoverOpacity($delayTime: 0.6s) {
+  opacity: 1;
+  transition: opacity $delayTime;
+  @media (hover: hover) {
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
