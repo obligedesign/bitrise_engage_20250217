@@ -1,0 +1,118 @@
+@use '../partials/functions';
+
+.recruit {
+  padding: minVWandPX(46) minVWandPX(50) minVWandPX(78);
+  background: #dbf5fb;
+  
+  &__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1060px;
+  }
+  
+  &-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: minVWandPX(31) minVWandPX(36);
+    
+    &-item {
+      width: calc(50% - #{minVWandPX(36)} / 2);
+      height: minVWandPX(253);
+      background: url("../img/recruit_list-item_bg.png") center center no-repeat;
+      background-size: cover;
+      position: relative;
+      
+      &.is-reverse {
+        background: url("../img/recruit_list-item_bg-reverse.png") center center no-repeat;
+        background-size: cover;
+      }
+      
+      &__content {
+        width: minVWandPX(246);
+        padding-top: minVWandPX(50);
+        
+        .is-reverse & {
+          margin: 0 0 0 auto;
+          width: minVWandPX(256);
+        }
+        
+        &-label {
+          margin-bottom: minVWandPX(11);
+          width: 100%;
+          display: block;
+          padding: minVWandPX(9) 0 minVWandPX(8) minVWandPX(29);
+          background: #00207d;
+          color: #fff;
+          font-size: minVWandPX(20);
+          font-weight: 900;
+          line-height: 1;
+          letter-spacing: 0;
+          position: relative;
+          z-index: 1;
+          
+          .is-reverse & {
+            padding: minVWandPX(9) minVWandPX(33) minVWandPX(8) minVWandPX(50)
+          }
+          
+          &::before {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: minVWandPX(37) 0 0 minVWandPX(14);
+            border-color: transparent transparent transparent #00207d;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateX(100%);
+            
+            .is-reverse & {
+              border-width: 0 0 minVWandPX(37) minVWandPX(14);
+              border-color: transparent transparent #00207d;
+              right: auto;
+              left: 0;
+              transform: translateX(-100%);
+            }
+          }
+          
+          span {
+            color: #fff179;
+          }
+        }
+        
+        &-title {
+          margin: 0 auto;
+          display: block;
+          width: fit-content;
+          font-size: minVWandPX(32);
+          font-weight: 700;
+          line-height: 1.24;
+          letter-spacing: .05em;
+          text-align: center;
+          
+          b {
+            font-size: minVWandPX(40);
+            font-weight: 900;
+            line-height: 1;
+          }
+        }
+      }
+      
+      &__image {
+        width: minVWandPX(272);
+        position: absolute;
+        top: minVWandPX(-10);
+        right: 0;
+        
+        .is-reverse & {
+          right: auto;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+}

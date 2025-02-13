@@ -52,7 +52,7 @@ a {
   cursor: pointer;
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (max-width: $tablet) {
   html,
   body,
   button,

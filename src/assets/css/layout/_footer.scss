@@ -1,3 +1,60 @@
-@use '../partials/functions';
+@use '../partials/functions' as func;
 
-@media screen and (min-width: $tablet) {}
+.footer {
+  padding: minVWandPX(55) minVWandPX(50) minVWandPX(46);
+  background: #f6f6f6;
+  
+  &__inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  
+  &-nav {
+    margin-bottom: minVWandPX(13);
+    font-size: minVWandPX(17);
+    letter-spacing: .15em;
+    
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      gap: 0 minVWandPX(30);
+      
+      li a {
+        display: block;
+        @include hoverOpacity();
+      }
+    }
+  }
+  
+  &-copyright {
+    font-size: minVWandPX(17);
+    letter-spacing: .13em;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .footer {
+    padding: convertPXtoVW(24) convertPXtoVW(25);
+    
+    &__inner {
+      justify-content: center;
+    }
+    
+    &-nav {
+      margin-bottom: convertPXtoVW(16);
+      font-size: convertPXtoVW(18);
+      
+      ul {
+        gap: 0 convertPXtoVW(40);
+      }
+    }
+    
+    &-copyright {
+      font-size: convertPXtoVW(16);
+      text-align: center;
+    }
+  }
+}

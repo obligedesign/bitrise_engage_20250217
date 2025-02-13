@@ -1,3 +1,62 @@
 @use '../partials/functions';
 
-@media screen and (min-width: $tablet) {}
+.cta {
+  padding: minVWandPX(45) minVWandPX(50);
+  background: #0e3583;
+  
+  &:last-child {
+    padding-top: minVWandPX(68);
+    padding-bottom: minVWandPX(68);
+  }
+  
+  &-description {
+    margin: 0 auto minVWandPX(33);
+    max-width: minVWandPX(500);
+    
+    p {
+      color: #fff;
+      font-size: minVWandPX(25);
+      font-weight: 700;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: .05em;
+      position: relative;
+      
+      &::before, &::after {
+        content: '';
+        display: block;
+        width: minVWandPX(40);
+        height: minVWandPX(78);
+        background: url("../img/cta-item.png") center center no-repeat;
+        background-size: contain;
+        margin-right: minVWandPX(10);
+        position: absolute;
+        bottom: 0;
+      }
+      
+      &::before {
+        left: minVWandPX(-46);
+      }
+      
+      &::after {
+        right: minVWandPX(-46);
+        transform: scale(-1, 1);
+      }
+      
+      span {
+        color: #fff179;
+        font-size: minVWandPX(30);
+      }
+      
+      img {
+        margin-right: minVWandPX(4);
+        max-width: minVWandPX(250);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+}

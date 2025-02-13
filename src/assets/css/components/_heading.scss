@@ -1,3 +1,29 @@
 @use '../partials/functions';
 
-@media screen and (min-width: $tablet) {}
+.heading01 {
+  margin-bottom: minVWandPX(71);
+  color: #00207d;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .15em;
+  text-align: center;
+  
+  span {
+    padding: 0 minVWandPX(12);
+    display: inline-block;
+    font-size: minVWandPX(32);
+    padding-bottom: minVWandPX(8);
+    border-bottom: minVWandPX(5) solid #00207d;
+    margin-bottom: minVWandPX(14);
+  }
+  
+  b {
+    display: inline-block;
+    font-size: minVWandPX(55);
+    font-weight: 900;
+    letter-spacing: .08em;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+}

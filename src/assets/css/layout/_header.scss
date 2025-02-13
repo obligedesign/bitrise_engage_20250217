@@ -1,3 +1,43 @@
 @use '../partials/functions';
 
-@media screen and (min-width: $tablet) {}
+.header {
+  padding: 0 minVWandPX(50);
+  background: #fff;
+  
+  &__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1060px;
+    height: minVWandPX(66);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &-logo {
+    max-width: minVWandPX(143);
+  }
+  
+  &-login {
+    color: #727272;
+    font-size: minVWandPX(16);
+    letter-spacing: .01em;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 0 minVWandPX(9);
+    @include hoverOpacity();
+    
+    &::before {
+      content: '';
+      display: block;
+      width: minVWandPX(16);
+      height: minVWandPX(21);
+      background: url("../img/header_login-icon.png") center center no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {}

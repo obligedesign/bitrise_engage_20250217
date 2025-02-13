@@ -12,11 +12,11 @@
  * 横幅の最大値を返す関数
  */
 
-@function minVWandPX($px, $vp: 850 + 100 * 2, $unit: vw) {
+@function minVWandPX($px, $vp: 960 + 100 * 2, $unit: vw) {
   @return min(#{(math.div($px, $vp) * 100) + $unit}, #{$px + px});
 }
 
-@function maxVWandPX($px, $vp: 850 + 100 * 2, $unit: vw) {
+@function maxVWandPX($px, $vp: 960 + 100 * 2, $unit: vw) {
   @return max(#{(math.div($px, $vp) * 100) + $unit}, #{$px + px});
 }
 

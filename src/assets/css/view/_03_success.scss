@@ -1,0 +1,162 @@
+@use '../partials/functions';
+
+.success {
+  padding: minVWandPX(101) minVWandPX(50) minVWandPX(108);
+  background: #dbf5fb;
+  
+  &__inner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 890px;
+  }
+  
+  .heading01 {
+    margin-bottom: minVWandPX(101);
+  }
+  
+  &-list {
+    display: flex;
+    flex-flow: column;
+    gap: minVWandPX(68) 0;
+    
+    &-item {
+      background: #fff;
+      border: minVWandPX(5) solid #123670;
+      box-shadow: minVWandPX(2) minVWandPX(2) minVWandPX(10) rgba(0, 0, 0, .3);
+      position: relative;
+      
+      &__title {
+        width: minVWandPX(493);
+        height: minVWandPX(80);
+        background: #123670;
+        border-radius: minVWandPX(999);
+        color: #fff;
+        font-size: minVWandPX(32);
+        font-weight: 700;
+        letter-spacing: .01em;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+      &__content {
+        padding: minVWandPX(72) minVWandPX(32) minVWandPX(27);
+        
+        &-step {
+          margin-bottom: minVWandPX(14);
+          display: flex;
+          flex-flow: row wrap;
+          gap: 0 minVWandPX(8);
+          
+          li {
+            width: calc(50% - #{minVWandPX(8)} / 2);
+            height: minVWandPX(84);
+            padding-left: minVWandPX(25);
+            background: #dadada;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 0 minVWandPX(9);
+            position: relative;
+            
+            &::before {
+              content: "";
+              width: 0;
+              height: 0;
+              border-style: solid;
+              border-top: minVWandPX(42) solid transparent;
+              border-bottom: minVWandPX(42)  solid transparent;
+              position: absolute;
+              top: 50%;
+            }
+            
+            &:nth-child(1) {
+              &::before {
+                border-left: minVWandPX(16) solid #dadada;
+                border-right: 0;
+                right: 0;
+                transform: translate(100%,-50%);
+                z-index: 1;
+              }
+            }
+            
+            &:nth-child(2) {
+              padding-left: minVWandPX(33);
+              background: #355da0;
+              
+              span {
+                background: #fff179;
+                color: #355da0;
+              }
+              
+              p {
+                color: #fff179;
+              }
+              
+              &::before {
+                border-left: minVWandPX(16) solid #fff;
+                border-right: 0;
+                left: 0;
+                transform: translate(0,-50%);
+              }
+            }
+          }
+          
+          span {
+            width: minVWandPX(102);
+            height: minVWandPX(33);
+            background: #fff;
+            border-radius: minVWandPX(999);
+            font-size: minVWandPX(20);
+            font-weight: 700;
+            letter-spacing: .1em;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          p {
+            font-size: minVWandPX(24);
+            font-weight: 700;
+            letter-spacing: .05em;
+          }
+        }
+        
+        &-wrapper {
+          max-width: minVWandPX(713);
+          margin: 0 auto;
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          gap: 0 minVWandPX(25);
+          
+          figure {
+            width: minVWandPX(125);
+          }
+          
+          p {
+            width: calc(100% - #{minVWandPX(125)} - #{minVWandPX(25)});
+            font-size: minVWandPX(22);
+            font-weight: 400;
+            letter-spacing: .05em;
+            line-height: 1.72;
+            
+            span {
+              display: block;
+              font-size: minVWandPX(20);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+}

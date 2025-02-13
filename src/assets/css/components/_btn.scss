@@ -1,3 +1,60 @@
 @use '../partials/functions';
 
-@media screen and (min-width: $tablet) {}
+.button01 {
+  margin: 0 auto;
+  width: minVWandPX(700);
+  height: minVWandPX(100);
+  background: #fff179;
+  border-radius: minVWandPX(999);
+  font-size: minVWandPX(30);
+  font-weight: 900;
+  letter-spacing: .01em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  &__fukidashi {
+    width: minVWandPX(112);
+    height: minVWandPX(108);
+    background: url("../img/button01_fukidashi.png") center center no-repeat;
+    background-size: contain;
+    font-size: minVWandPX(22);
+    text-align: center;
+    line-height: 1.1;
+    letter-spacing: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: minVWandPX(-16);
+    left: minVWandPX(90);
+    
+    b {
+      font-size: minVWandPX(30);
+    }
+  }
+  
+  &__text {
+    padding-left: minVWandPX(40);
+    position: relative;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: minVWandPX(12);
+      height: minVWandPX(22);
+      background: url("../img/button01_arrow.png") center center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 50%;
+      right: minVWandPX(-27);
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+}

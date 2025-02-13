@@ -1,10 +1,16 @@
 // swiper slider setting
 const initSlider = () => {
-  const slider = new Swiper('.other-slider', {
+  const slider = new Swiper('.swiper', {
     loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    allowTouchMove: false,
+    centeredSlides: true,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
     },
   })
 }
