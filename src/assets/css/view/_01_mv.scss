@@ -33,6 +33,10 @@
   
   .swiper {
     overflow: visible;
+    
+    .slider-item {
+      min-height: minVWandPX(680);
+    }
   }
   
   &-primary {
@@ -489,4 +493,268 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .mv {
+    padding: 0;
+    
+    &-primary {
+      margin: 0;
+      
+      &__inner {
+        padding: convertPXtoVW(54) 0 convertPXtoVW(52);
+      }
+      
+      &-content {
+        margin: 0 auto convertPXtoVW(73);
+        
+        &__fukidashi {
+          margin-bottom: convertPXtoVW(35);
+          width: convertPXtoVW(444);
+          height: convertPXtoVW(62);
+          border-radius: convertPXtoVW(999);
+          font-size: convertPXtoVW(30);
+          
+          &::before {
+            border-right: convertPXtoVW(9) solid transparent;
+            border-left: convertPXtoVW(9) solid transparent;
+            border-top: convertPXtoVW(20) solid #fff179;
+            bottom: convertPXtoVW(1);
+          }
+        }
+        
+        &__title {
+          font-size: convertPXtoVW(60);
+          
+          b {
+            font-size: convertPXtoVW(121);
+          }
+        }
+        
+        &__text {
+          font-size: convertPXtoVW(42);
+        }
+      }
+      
+      &__list {
+        margin-left: convertPXtoVW(-25);
+        flex-flow: column;
+        align-items: flex-start;
+        gap: convertPXtoVW(20) 0;
+        
+        li {
+          height: convertPXtoVW(133);
+          
+          .inner {
+            padding: 0 convertPXtoVW(30) 0 convertPXtoVW(50);
+          }
+          
+          &:nth-of-type(2) {
+            .inner {
+              padding-right: convertPXtoVW(50);
+            }
+          }
+          
+          p {
+            font-size: convertPXtoVW(32);
+            
+            span {
+              position: relative;
+              
+              &::before {
+                width: 100%;
+                height: convertPXtoVW(13);
+                bottom: convertPXtoVW(2);
+              }
+            }
+            
+            b {
+              font-size: convertPXtoVW(44);
+              
+              &.is-fz-lg {
+                font-size: convertPXtoVW(54);
+                margin-right: convertPXtoVW(4);
+              }
+            }
+          }
+        }
+      }
+      
+      &__image {
+        margin-right: convertPXtoVW(0);
+        
+        img {
+          width: convertPXtoVW(371);
+        }
+      }
+    }
+    
+    &-secondary {
+      margin: 0;
+      
+      &__inner {
+        padding: convertPXtoVW(54) 0 convertPXtoVW(35);
+      }
+      
+      &-content {
+        margin: 0 auto convertPXtoVW(77);
+        width: convertPXtoVW(580);
+        
+        &__fukidashi {
+          margin-bottom: convertPXtoVW(46);
+          width: convertPXtoVW(445);
+          height: convertPXtoVW(62);
+          border-radius: convertPXtoVW(999);
+          font-size: convertPXtoVW(30);
+          
+          &::before {
+            border-right: convertPXtoVW(9) solid transparent;
+            border-left: convertPXtoVW(9) solid transparent;
+            border-top: convertPXtoVW(20) solid #fff179;
+            bottom: convertPXtoVW(1);
+          }
+        }
+        
+        &__title {
+          font-size: convertPXtoVW(42);
+          
+          b {
+            font-size: convertPXtoVW(100);
+            
+            span {
+              font-size: convertPXtoVW(80);
+            }
+          }
+          
+          > span {
+            font-size: convertPXtoVW(60);
+          }
+        }
+        
+        &__text {
+          font-size: convertPXtoVW(42);
+        }
+      }
+      
+      &__list {
+        margin-left: convertPXtoVW(-48);
+        padding-left: convertPXtoVW(25);
+        gap: convertPXtoVW(47) 0;
+        
+        li {
+          height: convertPXtoVW(133);
+          
+          .inner {
+            padding: 0 convertPXtoVW(30) 0 convertPXtoVW(50);
+          }
+          
+          &:nth-of-type(2) {
+            .inner {
+              padding-right: convertPXtoVW(50);
+            }
+          }
+          
+          .label {
+            display: block;
+            width: convertPXtoVW(160);
+            height: convertPXtoVW(31);
+            font-size: convertPXtoVW(22);
+            top: convertPXtoVW(-50);
+            left: convertPXtoVW(20);
+            
+            &::before {
+              border-width: convertPXtoVW(31) 0 0 convertPXtoVW(10);
+            }
+          }
+          
+          p {
+            font-size: convertPXtoVW(32);
+            
+            span {
+              &::before {
+                height: convertPXtoVW(13);
+                bottom: convertPXtoVW(2);
+              }
+            }
+            
+            b {
+              font-size: convertPXtoVW(44);
+              
+              &.is-fz-lg {
+                font-size: convertPXtoVW(54);
+                margin-right: convertPXtoVW(4);
+              }
+            }
+          }
+        }
+      }
+      
+      &__image {
+        margin-right: 0;
+        top: auto;
+        bottom: 0;
+        right: 0;
+        
+        img {
+          width: convertPXtoVW(288);
+        }
+      }
+    }
+    
+    &-tertiary {
+      margin: auto 0;
+      
+      &__inner {
+        padding: convertPXtoVW(38) 0 0;
+        flex-flow: column;
+        justify-content: center;
+        gap: convertPXtoVW(26) 0;
+      }
+      
+      &__image {
+        max-width: convertPXtoVW(290);
+      }
+      
+      &-content {
+        max-width: 100%;
+        position: relative;
+        
+        &__lead {
+          font-size: convertPXtoVW(60);
+        }
+        
+        &__wrapper {
+          max-width: convertPXtoVW(562);
+          margin: convertPXtoVW(-14) auto convertPXtoVW(4);
+        }
+        
+        &__title {
+          p {
+            &:nth-of-type(1) {
+              font-size: convertPXtoVW(55);
+              
+              b {
+                font-size: convertPXtoVW(110);
+              }
+            }
+            
+            &:nth-of-type(2) {
+              font-size: convertPXtoVW(44);
+            }
+          }
+        }
+        
+        &__text {
+          font-size: convertPXtoVW(184);
+        }
+        
+        &__description {
+          margin-bottom: convertPXtoVW(42);
+          font-size: convertPXtoVW(21);
+        }
+        
+        &__logo {
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }

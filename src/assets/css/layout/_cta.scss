@@ -59,4 +59,45 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .cta {
+    padding: convertPXtoVW(60) convertPXtoVW(25);
+    
+    &:last-child {
+      padding-top: convertPXtoVW(68);
+      padding-bottom: convertPXtoVW(68);
+    }
+    
+    &-description {
+      margin: 0 auto convertPXtoVW(33);
+      max-width: convertPXtoVW(380);
+      
+      p {
+        font-size: convertPXtoVW(25);
+        
+        &::before, &::after {
+          width: convertPXtoVW(40);
+          height: convertPXtoVW(78);
+          margin-right: convertPXtoVW(10);
+        }
+        
+        &::before {
+          left: convertPXtoVW(-26);
+        }
+        
+        &::after {
+          right: convertPXtoVW(-26);
+        }
+        
+        span {
+          font-size: convertPXtoVW(30);
+        }
+        
+        img {
+          margin-right: convertPXtoVW(4);
+          max-width: convertPXtoVW(250);
+        }
+      }
+    }
+  }
+  
 }

@@ -57,4 +57,32 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .button01 {
+    width: convertPXtoVW(550);
+    height: convertPXtoVW(100);
+    border-radius: convertPXtoVW(999);
+    font-size: convertPXtoVW(30);
+    
+    &__fukidashi {
+      width: convertPXtoVW(112);
+      height: convertPXtoVW(108);
+      font-size: convertPXtoVW(22);
+      top: convertPXtoVW(-22);
+      left: convertPXtoVW(20);
+      
+      b {
+        font-size: convertPXtoVW(30);
+      }
+    }
+    
+    &__text {
+      padding-left: convertPXtoVW(40);
+      
+      &::after {
+        width: convertPXtoVW(12);
+        height: convertPXtoVW(22);
+        right: convertPXtoVW(-27);
+      }
+    }
+  }
 }

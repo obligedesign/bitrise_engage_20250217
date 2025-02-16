@@ -40,4 +40,26 @@
   }
 }
 
-@media screen and (max-width: $tablet) {}
+@media screen and (max-width: $tablet) {
+  .header {
+    padding: 0 convertPXtoVW(25);
+    
+    &__inner {
+      height: convertPXtoVW(80);
+    }
+    
+    &-logo {
+      max-width: convertPXtoVW(207);
+    }
+    
+    &-login {
+      font-size: convertPXtoVW(16);
+      gap: 0 convertPXtoVW(8);
+      
+      &::before {
+        width: convertPXtoVW(16);
+        height: convertPXtoVW(21);
+      }
+    }
+  }
+}

@@ -26,4 +26,20 @@
 }
 
 @media screen and (max-width: $tablet) {
+  .heading01 {
+    margin-bottom: convertPXtoVW(71);
+    
+    span {
+      padding: 0 convertPXtoVW(12);
+      font-size: convertPXtoVW(32);
+      padding-bottom: convertPXtoVW(8);
+      border-bottom: convertPXtoVW(5) solid #00207d;
+      margin-bottom: convertPXtoVW(14);
+      white-space: nowrap;
+    }
+    
+    b {
+      font-size: convertPXtoVW(55);
+    }
+  }
 }
