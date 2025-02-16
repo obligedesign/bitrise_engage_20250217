@@ -37,14 +37,14 @@
 
 @media screen and (max-width: $tablet) {
   .footer {
-    padding: convertPXtoVW(48) convertPXtoVW(25);
+    padding: convertPXtoVW(44) convertPXtoVW(25);
     
     &-nav {
-      margin-bottom: convertPXtoVW(19);
+      margin-bottom: convertPXtoVW(8);
       font-size: convertPXtoVW(17);
       
       ul {
-        gap: convertPXtoVW(11) convertPXtoVW(40);
+        gap: convertPXtoVW(6) convertPXtoVW(40);
         justify-content: center;
       }
     }

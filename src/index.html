@@ -7,36 +7,65 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="robots" content="noindex" />
-  <title>タイトル</title>
-  <meta name="description" content="">
+  <title>会員登録 | エンゲージ｜求人企業数No.1 社員・バイト求人サイト</title>
+  <meta name="description" content="会員登録はこちら。求人企業数No.1 ！社員・バイト求人ならエンゲージ。エン・ジャパンが運営する求人サイトです。">
   <meta name="robots" content="noindex">
   <link rel="icon" href="assets/img/favicon.ico">
   
   <!-- OGP -->
-  <meta property="og:title" content="">
-  <meta property="og:url" content="">
-  <meta property="og:type" content="">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="">
+  <meta property="og:title" content="会員登録 | エンゲージ｜求人企業数No.1 社員・バイト求人サイト">
+  <meta property="og:url" content="https://en-gage.net/user/signup/">
+  <meta property="og:type" content="article">
+  <meta property="og:description" content="会員登録はこちら。求人企業数No.1 ！社員・バイト求人ならエンゲージ。エン・ジャパンが運営する求人サイトです。">
+  <meta property="og:image" content="https://en-gage.net/imageFile_user/og_engage.png">
+  <meta property="og:site_name" content="エンゲージ">
   <!-- /OGP -->
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <!--  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>-->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-  <!--  <script src="./assets/js/jquery.inview.min.js" defer></script>-->
   
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script src="./assets/js/app.js" defer></script>
+  
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start':
+          new Date().getTime(),
+
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W636Z9');
+  </script>
+  
+  <!-- Kaizen Tag -->
+  <script src="//cdn.kaizenplatform.net/s/d2/f7e4c090b08e3f.js?kz_namespace=kzs" charset="utf-8"></script>
+  
+  <!-- event Tag -->
+  <script type="text/javascript" src="/sys/user_script/conversion_api_set_eventid.js"></script>
+  <script defer type="text/javascript" src="/sys/user_script/conversion_api_send_event.js"></script>
 </head>
 
 <body class="">
-
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe src="//www.googletagmanager.com/ns.html?id=GTM-W636Z9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="header">
   <div class="header__inner">
     <h1 class="header-logo">
-      <img src="./assets/img/logo.png" alt="エン転職">
+      <picture>
+        <source media="(max-width: 767px)" srcset="./assets/img/logo_sp.png">
+        <img src="./assets/img/logo.png" alt="エン転職">
+      </picture>
     </h1>
     <a href="" class="header-login"><span>既に会員の方はこちら</span></a>
   </div>
@@ -100,15 +129,17 @@
                 <img src="./assets/img/mv-tertiary_image.png" alt="">
               </figure>
               <div class="mv-tertiary-content">
-                <p class="mv-tertiary-content__lead">おかげさまで</p>
-                <div class="mv-tertiary-content__wrapper">
-                  <div class="mv-tertiary-content__title">
-                    <p><b>7</b>年連続</p>
-                    <p>総合満足度</p>
+                <div class="mv-tertiary-content__group">
+                  <p class="mv-tertiary-content__lead">おかげさまで</p>
+                  <div class="mv-tertiary-content__wrapper">
+                    <div class="mv-tertiary-content__title">
+                      <p><b>7</b>年連続</p>
+                      <p>総合満足度</p>
+                    </div>
+                    <p class="mv-tertiary-content__text">No.<span>1</span></p>
                   </div>
-                  <p class="mv-tertiary-content__text">No.<span>1</span></p>
+                  <p class="mv-tertiary-content__description">2018年〜2024年 オリコン顧客満足度調査 転職サイト 第１位</p>
                 </div>
-                <p class="mv-tertiary-content__description">2018年〜2024年 オリコン顧客満足度調査 転職サイト 第１位</p>
                 <picture class="mv-tertiary-content__logo">
                   <source media="(max-width: 767px)" srcset="./assets/img/mv-tertiary_logo_sp.png">
                   <img src="./assets/img/mv-tertiary_logo.png" alt="エン転職">
@@ -139,36 +170,40 @@
             <p class="recruit-list-item__content-label">住民の<span>暮らしを支える</span></p>
             <h3 class="recruit-list-item__content-title"><b>インフラ</b>に<br>関わる求人</h3>
           </div>
-          <figure class="recruit-list-item__image">
+          <picture class="recruit-list-item__image">
+            <source media="(max-width: 767px)" srcset="./assets/img/recruit_list-item_image01_sp.png">
             <img src="./assets/img/recruit_list-item_image01.png" alt="">
-          </figure>
+          </picture>
         </li>
         <li class="recruit-list-item">
           <div class="recruit-list-item__content">
             <p class="recruit-list-item__content-label"><span>スポーツ経験</span>を活かす</p>
             <h3 class="recruit-list-item__content-title"><b>スポーツ</b>に<br>関わる求人</h3>
           </div>
-          <figure class="recruit-list-item__image">
+          <picture class="recruit-list-item__image">
+            <source media="(max-width: 767px)" srcset="./assets/img/recruit_list-item_image02_sp.png">
             <img src="./assets/img/recruit_list-item_image02.png" alt="">
-          </figure>
+          </picture>
         </li>
         <li class="recruit-list-item is-reverse">
           <div class="recruit-list-item__content">
             <p class="recruit-list-item__content-label"><span>社会貢献</span>を感じる</p>
             <h3 class="recruit-list-item__content-title"><b>官公庁</b><br>の求人</h3>
           </div>
-          <figure class="recruit-list-item__image">
+          <picture class="recruit-list-item__image">
+            <source media="(max-width: 767px)" srcset="./assets/img/recruit_list-item_image03_sp.png">
             <img src="./assets/img/recruit_list-item_image03.png" alt="">
-          </figure>
+          </picture>
         </li>
         <li class="recruit-list-item is-reverse">
           <div class="recruit-list-item__content">
-            <p class="recruit-list-item__content-label">ゲーム好き<span>を活かす</span></p>
+            <p class="recruit-list-item__content-label"><span>ゲーム好き</span>を活かす</p>
             <h3 class="recruit-list-item__content-title"><b>ゲーム</b>に<br>関わる求人</h3>
           </div>
-          <figure class="recruit-list-item__image">
+          <picture class="recruit-list-item__image">
+            <source media="(max-width: 767px)" srcset="./assets/img/recruit_list-item_image04_sp.png">
             <img src="./assets/img/recruit_list-item_image04.png" alt="">
-          </figure>
+          </picture>
         </li>
       </ul>
     </div>

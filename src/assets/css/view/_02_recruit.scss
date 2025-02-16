@@ -94,6 +94,7 @@
               background-size: contain;
               right: minVWandPX(6);
               text-align: right;
+              letter-spacing: .05em;
             }
           }
           
@@ -148,6 +149,9 @@
               font-size: convertPXtoVW(26);
               background: url("../img/recruit_list-item_label-reverse_sp.png") center center no-repeat;
               background-size: contain;
+              letter-spacing: .05em;
+              position: relative;
+              right: convertPXtoVW(15);
             }
           }
           

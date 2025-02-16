@@ -2,12 +2,12 @@
 const initMvSlider = () => {
   new Swiper('.mv-slider', {
     loop: true,
-    // allowTouchMove: false,
+    allowTouchMove: false,
     centeredSlides: true,
-    // speed: 1000,
-    // autoplay: { delay: 5000 },
-    // effect: 'fade',
-    // fadeEffect: { crossFade: true },
+    speed: 1000,
+    autoplay: { delay: 4000 },
+    effect: 'fade',
+    fadeEffect: { crossFade: true },
   });
 };
 

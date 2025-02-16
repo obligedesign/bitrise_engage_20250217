@@ -9,12 +9,11 @@
   text-align: center;
   
   span {
-    padding: 0 minVWandPX(12);
+    margin-bottom: minVWandPX(18);
+    padding: 0 minVWandPX(12) minVWandPX(12);
     display: inline-block;
     font-size: minVWandPX(32);
-    padding-bottom: minVWandPX(8);
     border-bottom: minVWandPX(5) solid #00207d;
-    margin-bottom: minVWandPX(14);
   }
   
   b {
@@ -30,11 +29,10 @@
     margin-bottom: convertPXtoVW(71);
     
     span {
-      padding: 0 convertPXtoVW(12);
+      margin-bottom: convertPXtoVW(16);
+      padding: 0 convertPXtoVW(12) convertPXtoVW(12);
       font-size: convertPXtoVW(32);
-      padding-bottom: convertPXtoVW(8);
       border-bottom: convertPXtoVW(5) solid #00207d;
-      margin-bottom: convertPXtoVW(14);
       white-space: nowrap;
     }
     

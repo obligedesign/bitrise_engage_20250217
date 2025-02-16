@@ -2,21 +2,37 @@
 
 @mixin ItemAnimation01() {
   opacity: 0;
-  transition: opacity .6s ease-in-out;
+  transition: all .4s ease-in-out;
   transition-delay: 1s;
+  transform: translateY(convertPXtoVW(2));
   
   .swiper-slide-active & {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @mixin ItemAnimation02() {
   opacity: 0;
-  transition: opacity .6s ease-in-out;
-  transition-delay: 2s;
+  transition: all .4s ease-in-out;
+  transition-delay: 1.5s;
+  transform: translateY(convertPXtoVW(2));
   
   .swiper-slide-active & {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@mixin ItemAnimation03() {
+  opacity: 0;
+  transition: all .4s ease-in-out;
+  transition-delay: 2s;
+  transform: translateY(convertPXtoVW(2));
+  
+  .swiper-slide-active & {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -110,12 +126,12 @@
     }
     
     &__list {
+      margin-left: minVWandPX(-30);
       display: flex;
       flex-flow: row wrap;
-      gap: 0 minVWandPX(20);
-      @include ItemAnimation02();
       
       li {
+        margin-left: minVWandPX(-20);
         height: minVWandPX(133);
         background: #fff;
         display: flex;
@@ -123,45 +139,26 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        transform: skewX(20deg);
         
-        .inner {
-          padding: 0 minVWandPX(30) 0 minVWandPX(50);
-          transform: skewX(-20deg);
-        }
-        
-        &:nth-of-type(2) {
+        &:nth-of-type(1) {
+          width: minVWandPX(439);
+          background: url("../img/mv-primary_list_bg01.png") center center no-repeat;
+          background-size: contain;
+          @include ItemAnimation02();
+          
           .inner {
-            padding-right: minVWandPX(50);
+            padding-left: minVWandPX(30);
           }
         }
         
-        .label {
-          display: block;
-          width: minVWandPX(132);
-          height: minVWandPX(26);
-          color: #fff;
-          font-size: minVWandPX(19);
-          font-weight: 700;
-          letter-spacing: .05em;
-          text-align: center;
-          background: #00207d;
-          position: absolute;
-          top: minVWandPX(-36);
-          left: minVWandPX(-19);
+        &:nth-of-type(2) {
+          width: minVWandPX(390);
+          background: url("../img/mv-primary_list_bg02.png") center center no-repeat;
+          background-size: contain;
+          @include ItemAnimation03();
           
-          &::before {
-            border-color: transparent transparent transparent #00207d;
-            border-style: solid;
-            border-width: minVWandPX(26) 0 0 minVWandPX(10);
-            bottom: 0;
-            content: "";
-            display: block;
-            height: 0;
-            position: absolute;
-            right: 0;
-            transform: translateX(100%);
-            width: 0;
+          .inner {
+            padding-left: minVWandPX(0);
           }
         }
         
@@ -300,11 +297,8 @@
     }
     
     &__list {
-      padding-left: minVWandPX(25);
       display: flex;
       flex-flow: row wrap;
-      gap: 0 minVWandPX(20);
-      @include ItemAnimation02();
       
       li {
         height: minVWandPX(133);
@@ -313,17 +307,27 @@
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
-        position: relative;
-        transform: skewX(20deg);
         
-        .inner {
-          padding: 0 minVWandPX(30) 0 minVWandPX(50);
-          transform: skewX(-20deg);
+        &:nth-of-type(1) {
+          width: minVWandPX(390);
+          background: url("../img/mv-primary_list_bg02.png") center center no-repeat;
+          background-size: contain;
+          @include ItemAnimation02();
+          
+          .inner {
+            padding-left: minVWandPX(20);
+          }
         }
         
         &:nth-of-type(2) {
+          margin-left: minVWandPX(-20);
+          width: minVWandPX(439);
+          background: url("../img/mv-primary_list_bg01.png") center center no-repeat;
+          background-size: contain;
+          @include ItemAnimation03();
+          
           .inner {
-            padding-right: minVWandPX(50);
+            padding-left: minVWandPX(0);
           }
         }
         
@@ -338,8 +342,9 @@
           text-align: center;
           background: #00207d;
           position: absolute;
-          top: minVWandPX(-36);
-          left: minVWandPX(-19);
+          top: 0;
+          left: 0;
+          transform: translate(0, -100%);
           
           &::before {
             border-color: transparent transparent transparent #00207d;
@@ -398,15 +403,12 @@
     }
     
     &__image {
+      width: minVWandPX(564);
       margin-right: minVWandPX(6);
       position: absolute;
       top: minVWandPX(100);
-      right: minVWandPX(-80);
+      right: minVWandPX(-40);
       z-index: -1;
-      
-      img {
-        width: minVWandPX(564);
-      }
     }
   }
   
@@ -423,6 +425,7 @@
     
     &__image {
       max-width: calc(100% - #{minVWandPX(600)} - #{minVWandPX(54)});
+      @include ItemAnimation01();
     }
     
     &-content {
@@ -432,7 +435,10 @@
       align-items: center;
       color: #fff;
       font-weight: 700;
-      @include ItemAnimation01();
+      
+      &__group {
+        @include ItemAnimation02();
+      }
       
       &__lead {
         font-size: minVWandPX(60);
@@ -500,7 +506,7 @@
       margin: 0;
       
       &__inner {
-        padding: convertPXtoVW(54) 0 convertPXtoVW(52);
+        padding: convertPXtoVW(54) 0 convertPXtoVW(46);
       }
       
       &-content {
@@ -535,21 +541,35 @@
       }
       
       &__list {
-        margin-left: convertPXtoVW(-25);
+        margin-left: 0;
         flex-flow: column;
         align-items: flex-start;
-        gap: convertPXtoVW(20) 0;
+        gap: convertPXtoVW(20);
         
         li {
+          padding-left: convertPXtoVW(30);
           height: convertPXtoVW(133);
+          justify-content: flex-start;
           
-          .inner {
-            padding: 0 convertPXtoVW(30) 0 convertPXtoVW(50);
+          &:nth-of-type(1) {
+            margin-left: 0;
+            width: convertPXtoVW(406);
+            background: url("../img/mv-primary_list_bg01_sp.png") center center no-repeat;
+            background-size: contain;
+            
+            .inner {
+              padding-left: 0;
+            }
           }
           
           &:nth-of-type(2) {
+            margin-left: 0;
+            width: convertPXtoVW(359);
+            background: url("../img/mv-primary_list_bg02_sp.png") center center no-repeat;
+            background-size: contain;
+            
             .inner {
-              padding-right: convertPXtoVW(50);
+              padding-left: 0;
             }
           }
           
@@ -635,33 +655,46 @@
       }
       
       &__list {
-        margin-left: convertPXtoVW(-48);
-        padding-left: convertPXtoVW(25);
-        gap: convertPXtoVW(47) 0;
+        margin-left: 0;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: convertPXtoVW(40);
         
         li {
+          padding-left: convertPXtoVW(30);
           height: convertPXtoVW(133);
+          justify-content: flex-start;
           
-          .inner {
-            padding: 0 convertPXtoVW(30) 0 convertPXtoVW(50);
+          &:nth-of-type(1) {
+            margin-left: 0;
+            width: convertPXtoVW(343);
+            background: url("../img/mv-primary_list_bg02_sp.png") center center no-repeat;
+            background-size: contain;
+            
+            .inner {
+              padding-left: 0;
+            }
           }
           
           &:nth-of-type(2) {
+            margin-left: 0;
+            width: convertPXtoVW(399);
+            background: url("../img/mv-primary_list_bg01_sp.png") center center no-repeat;
+            background-size: contain;
+            
             .inner {
-              padding-right: convertPXtoVW(50);
+              padding-left: 0;
             }
           }
           
           .label {
             display: block;
-            width: convertPXtoVW(160);
-            height: convertPXtoVW(31);
-            font-size: convertPXtoVW(22);
-            top: convertPXtoVW(-50);
-            left: convertPXtoVW(20);
+            width: convertPXtoVW(132);
+            height: convertPXtoVW(26);
+            font-size: convertPXtoVW(19);
             
             &::before {
-              border-width: convertPXtoVW(31) 0 0 convertPXtoVW(10);
+              border-width: convertPXtoVW(26) 0 0 convertPXtoVW(10);
             }
           }
           
@@ -688,14 +721,11 @@
       }
       
       &__image {
+        width: convertPXtoVW(288);
         margin-right: 0;
         top: auto;
         bottom: 0;
         right: 0;
-        
-        img {
-          width: convertPXtoVW(288);
-        }
       }
     }
     
