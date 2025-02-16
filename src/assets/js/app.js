@@ -15,7 +15,7 @@ const initMvSlider = () => {
 let successSlider;
 
 const initSuccessSlider = () => {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 769) {
     if (!successSlider) {
       successSlider = new Swiper('.success-slider', {
         slidesPerView: 1,

@@ -138,6 +138,8 @@
             font-size: minVWandPX(24);
             font-weight: 700;
             letter-spacing: .05em;
+            position: relative;
+            z-index: 2;
           }
         }
         
@@ -263,7 +265,7 @@
         }
         
         &__content {
-          padding: convertPXtoVW(78) convertPXtoVW(37) convertPXtoVW(43);
+          padding: convertPXtoVW(78) convertPXtoVW(34) convertPXtoVW(43);
           
           &-step {
             margin-bottom: convertPXtoVW(37);
@@ -308,6 +310,7 @@
             }
             
             p {
+              padding-left: convertPXtoVW(4);
               font-size: convertPXtoVW(26);
               white-space: nowrap;
             }
