@@ -177,12 +177,7 @@ const app = {
           context: src.root,
           from: 'assets/js/app.js',
           to: path.resolve(__dirname, dest.js),
-        },
-        {
-          context: src.root,
-          from: 'assets/js/library/jquery.inview.min.js',
-          to: path.resolve(__dirname, dest.js),
-        },
+        }
       ],
     }),
     // new WriteFilePlugin(),
