@@ -16,6 +16,7 @@
   align-items: center;
   position: relative;
   box-shadow: 0 minVWandPX(5) minVWandPX(4) rgba(1, 17, 63, .9);
+  @include hoverOpacity();
   
   &__fukidashi {
     width: minVWandPX(112);
