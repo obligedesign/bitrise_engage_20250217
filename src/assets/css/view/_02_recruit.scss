@@ -118,7 +118,7 @@
       display: block;
       position: absolute;
       left:0;
-      bottom: 0;
+      bottom: -1px;
       border-top: convertPXtoVW(60) solid transparent;
       border-left: 50vw solid transparent;
       border-right: 50vw solid #0e3583;
